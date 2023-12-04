@@ -1,0 +1,49 @@
+import React, {useState} from 'react';
+import{View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+
+import {useNavigation} from '@react-navigation/native';
+
+export default function Login() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    function handleLogin(){
+        alert("Acessar!")
+    }
+
+    return(
+        <View style={styles.container}>
+            <Text style={styles.title}>Seja Bem Vindo(a)!!</Text>
+
+            <TextInput
+            style={styles.input}
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+            placeholder="Digite seu email"
+            />
+
+            <TextInput
+            style={styles.input}
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+            placeholder="Digite sua Senha"
+            />
+
+            <TouchableOpacity style={styles.button} onPress={handleLogin}>
+                <Text style={styles.buttonText}>Acessar</Text>
+            </TouchableOpacity>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    title:{
+        marginBottom: 14,
+        fontSize: 20,
+    },
+})
