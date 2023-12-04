@@ -6,7 +6,7 @@ class LoginController {
 
         console.log (id, email, nome)
 
-        database.insert({id,nome,email}).table("generos").then(data=>{
+        database.insert({id,nome,email}).table("oi").then(data=>{
             console.log(data)
             response.json({message: "Login efetuado com sucesso!!"})
         }).catch(error=>{
