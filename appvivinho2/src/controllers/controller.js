@@ -2,9 +2,9 @@ const database = require ('../database/connection')
 
 class LoginController {
     newGenre(request,response){
-        const {Password, email} = request.body
+        const {id, email, nome} = request.body
 
-        console.log (Password, email)
+        console.log (id, email, nome)
 
         database.insert({id,nome,email}).table("generos").then(data=>{
             console.log(data)
