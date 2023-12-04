@@ -46,4 +46,24 @@ const styles = StyleSheet.create({
         marginBottom: 14,
         fontSize: 20,
     },
+    input:{
+        width: '90%',
+        height: 45,
+        backgroundColor: '#A7A7A7',
+        borderRadius: 4,
+        marginBottom: 14,
+        padding: 8,
+    },
+    button:{
+        width: '90%',
+        height: 45,
+        backgroundColor: '#B0060E',
+        borderRadius: 4,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    buttonText:{
+        fontSize: 20,
+        color: '#FFF'
+    }
 })
